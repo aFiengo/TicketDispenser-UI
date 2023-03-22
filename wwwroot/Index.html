@@ -1,0 +1,87 @@
+﻿<!DOCTTYPE html>
+<html>
+<head>
+    <title>Ticket Dispenser</title>
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/c2e5c72cde.js" crossorigin="anonymous"></script>
+
+</head>
+<header>
+    <div class="left-section">
+        <img class="logo" src="img/smallTruextend_logo.jpg" alt="Truextend logo">
+        <nav class="categories">
+            <ul>
+                <li><a href="#">Music Events</a></li>
+                <li><a href="#">Sport Events</a></li>
+                <li><a href="#">Other Events</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="tittle"><a href="#">Ticket Dispenser</a></div>
+    <div class="right-section">
+        <div class="search-box">
+                <input class="search-txt" type="text" placeholder="Type something to search...">
+                <a class="search-button" href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+        </div>
+        <nav class="user">
+            <ul>
+                <li class="button sign"><a href="#">Sig In</a></li>
+                <li class="button log"><a href="#">Log In</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+<body>
+    <section class="section">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="st first">
+                    <img src="img/slide/01.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="img/slide/02.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="img/slide/03.jpg" alt="">
+                </div>
+
+                <div class="st">
+                    <img src="img/slide/04.jpg" alt="">
+                </div>
+                <div class="nav-auto">
+                    <div class="a-b1"></div>
+                    <div class="a-b2"></div>
+                    <div class="a-b3"></div>
+                    <div class="a-b4"></div>
+                </div>
+            </div>
+            <div class="nav-m">
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio1" class="m-btn"></label>
+                <label for="radio1" class="m-btn"></label>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var counter=1;
+        setInterval(function(){
+            document.getElementById?('radio' + counter).checked=true:
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },5000)
+    </script>
+</body>
+</html>
