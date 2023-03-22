@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TicketDispenserUI
 build_property.RootNamespace = TicketDispenserUI
-build_property.ProjectDir = d:\Training\Ariel Fiengo\Training\WebAPP-API workshop\TicketDispenserAPI\TicketDispenserUI\TicketDispenserUI\
+build_property.ProjectDir = e:\Ariel\Trabajo\Truextend\Training\Training C\Final project - WEB APP\TicketDispenser-UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\Training\Ariel Fiengo\Training\WebAPP-API workshop\TicketDispenserAPI\TicketDispenserUI\TicketDispenserUI
+build_property.MSBuildProjectDirectory = e:\Ariel\Trabajo\Truextend\Training\Training C\Final project - WEB APP\TicketDispenser-UI
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/Error.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/Index.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/Privacy.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/_ViewImports.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/_ViewStart.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Training/Ariel Fiengo/Training/WebAPP-API workshop/TicketDispenserAPI/TicketDispenserUI/TicketDispenserUI/Pages/Shared/_Layout.cshtml]
+[e:/Ariel/Trabajo/Truextend/Training/Training C/Final project - WEB APP/TicketDispenser-UI/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-efuw8xxx2x
