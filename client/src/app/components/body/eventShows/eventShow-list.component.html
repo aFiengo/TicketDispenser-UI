@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" 
+                [(ngModel)]="listFilter"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtered by: </h4>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table" *ngIf="eventShows.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary"
+                                (click)='toggleImage()'>
+                                {{showImage ? 'Hide' : 'Show'}} Image
+                            </button>
+                        </th>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Zone</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let event of eventShows">
+                        <td>
+                            <img *ngIf="showImage"
+                            [src]="eventShows.imageUrl"
+                            [title]="eventShows.name"
+                            [sytle.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin">
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
