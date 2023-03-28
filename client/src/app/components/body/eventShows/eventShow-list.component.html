@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table" *ngIf="eventShows.length">
+            <table class="table" *ngIf="(eventShows$ | async)?.length">
                 <thead>
                     <tr>
                         <th>
@@ -33,17 +33,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let event of eventShows">
+                    <tr *ngFor="let event of eventShows$ | async">
                         <td>
-                            <img *ngIf="showImage"
-                            [src]="eventShows.imageUrl"
-                            [title]="eventShows.name"
-                            [sytle.width.px]="imageWidth"
-                            [style.margin.px]="imageMargin">
+                          <img *ngIf="showImage" [src]="event.eventShowImgUrl"
+                            [alt]="event.eventShowName" [title]="event.eventShowName"
+                            [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
                         </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ event.eventShowName }}</td>
+                        <td>{{ event.eventShowDate | date }}</td>
+                        <td>{{ event.eventShowVenueLocation }}</td>
+                        <td>{{ event.eventShowZone }}</td>
+                        <td>{{ event.eventShowPrice | currency:'USD':'symbol' }}</td>
                     </tr>
                 </tbody>
             </table>

@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { EventListComponent } from './components/body/eventShows/eventShow-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SliderComponent } from './components/body/slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,

@@ -10,21 +10,22 @@ export class EventShowService {
 
     }
 
-    getEventShows(): Observable<IEventShow>[]{
+    getEventShows(): Observable<IEventShow[]>{
         return this.http.get<IEventShow[]>(this.eventShowUrl).pipe(
             tap(data => console.log('All', JSON.stringify(data))),
             catchError(this.handleError)
         );
     }
-}
 
 private handleError(err: HttpErrorResponse) {
-    let errorMessage = '';
-    if (err.error instanceof ErrorEvent) {
-        errorMessage = 'An error occurred: ${err.error.message}';
-    } else {
-        errorMessage = 'Server returned code: ${err.status}, error message is: ${err.message}';
+        let errorMessage = '';
+        if (err.error instanceof ErrorEvent) {
+            errorMessage = 'An error occurred: ${err.error.message}';
+        } else {
+            errorMessage = 'Server returned code: ${err.status}, error message is: ${err.message}';
+        }
+        console.error(errorMessage);
+        return throwError(()=>errorMessage);
     }
-    console.error(errorMessage);
-    return throwError(()=>errorMessage);
 }
+
