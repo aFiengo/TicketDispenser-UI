@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table" *ngIf="(eventShows$ | async)?.length">
+            <table class="table" *ngIf="(eventShows)?.length">
                 <thead>
                     <tr>
                         <th>
@@ -26,24 +26,25 @@
                             </button>
                         </th>
                         <th>Event</th>
+                        <th>Category</th>
                         <th>Date</th>
+                        <th>Venue</th>
                         <th>Location</th>
-                        <th>Zone</th>
-                        <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let event of eventShows$ | async">
+                    <tr *ngFor="let event of eventShows">
                         <td>
-                          <img *ngIf="showImage" [src]="event.eventShowImgUrl"
-                            [alt]="event.eventShowName" [title]="event.eventShowName"
-                            [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
+                          <!--img *ngIf="showImage" [src]="event.eventShowImgUrl"
+                            [alt]="event.name [title]="event.name
+                            [style.width.px]="imageWidth" [style.margin.px]="imageMargin"-->
                         </td>
-                        <td>{{ event.eventShowName }}</td>
-                        <td>{{ event.eventShowDate | date }}</td>
-                        <td>{{ event.eventShowVenueLocation }}</td>
-                        <td>{{ event.eventShowZone }}</td>
-                        <td>{{ event.eventShowPrice | currency:'USD':'symbol' }}</td>
+                        <td>{{ event.name }}</td>
+                        <td>{{ event.category }}</td>
+                        <td>{{ event.date | date }}</td>
+                        <td>{{ event.venueName }} </td>
+                        <td>{{ event.venueLocation }}</td>
+                        <!--td>{{ event.eventShowPrice | currency:'USD':'symbol' }}</td-->
                     </tr>
                 </tbody>
             </table>

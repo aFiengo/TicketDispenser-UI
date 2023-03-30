@@ -1,10 +1,11 @@
 export interface IEventShow {
-    eventShowId: number,
+    id: number,
     eventShowImgUrl: string,
-    eventShowName: string,
-    eventShowVenueName: string,
-    eventShowVenueLocation: string,
-    eventShowDate: string,
-    eventShowZone: string,
-    eventShowPrice: number
+    category: string,
+    name: string,
+    venueName: string,
+    venueLocation: string,
+    date: string,
+    zone: string,
+    price: number
 }

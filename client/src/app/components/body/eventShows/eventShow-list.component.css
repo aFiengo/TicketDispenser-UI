@@ -1,3 +1,19 @@
 thead {
     color: #337ab7;
 }
+
+.event-list {
+    margin: 0;
+    padding: 0;
+}
+
+.event-card {
+    margin: 10px;
+    padding: 10px;
+}
+
+:host {
+    display: block;
+    padding: 20px;
+    margin-top: 20px;
+}

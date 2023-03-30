@@ -16,11 +16,13 @@ export class EventListComponent implements OnInit{
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = "";
-    eventShows$: Observable<IEventShow[]> = this.eventShowService.getEventShows();
+    eventShows: IEventShow[] = [];
     constructor(private eventShowService: EventShowService) { }
 
     ngOnInit(): void {
-    this.eventShows$ = this.eventShowService.getEventShows();
+        this.eventShowService.getEventShows().subscribe(data => { 
+            this.eventShows = data; 
+        });
     }
 
     toggleImage(): void {

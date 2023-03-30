@@ -7,12 +7,15 @@ import { IEventShow } from "./eventShow";
 export class EventShowService {
     private eventShowUrl = 'http://localhost:8800/api/event';
     constructor (private http: HttpClient) {
-
+        this.http = http;
     }
 
     getEventShows(): Observable<IEventShow[]>{
         return this.http.get<IEventShow[]>(this.eventShowUrl).pipe(
-            tap(data => console.log('All', JSON.stringify(data))),
+            tap(data => {
+                console.log('All', JSON.stringify(data));
+                return data;
+            }),
             catchError(this.handleError)
         );
     }
