@@ -6,15 +6,14 @@
         <div class="row">
             <div class="col-md-2">Filter by:</div>
             <div class="col-md-4">
-                <input type="text" 
-                [(ngModel)]="listFilter"/>
+                <input type="text" [(ngModel)]="listFilter" (ngModelChange)="onFilterChange()" />
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h4>Filtered by: </h4>
+                <h4>Filtered by: {{listFilter}}</h4>
             </div>
-        </div>
+        </div>        
         <div class="table-responsive">
             <table class="table" *ngIf="(eventShows)?.length">
                 <thead>
@@ -33,17 +32,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let event of eventShows">
+                    <tr *ngFor="let event of filteredEvents">
                         <td>
-                          <!--img *ngIf="showImage" [src]="event.eventShowImgUrl"
-                            [alt]="event.name [title]="event.name
-                            [style.width.px]="imageWidth" [style.margin.px]="imageMargin"-->
+                            <div class="event-image-container">
+                            <img [src]=" '../../../../../../assets/img/small_cards/' +  event.id + '.jpg'" alt="Event Image" class="event-image" *ngIf="showImage">
+                            </div>
                         </td>
-                        <td>{{ event.name }}</td>
+                        <td>
+                            <div class="event-name">{{ event.name }}</div>
+                        </td>
                         <td>{{ event.category }}</td>
                         <td>{{ event.date | date }}</td>
                         <td>{{ event.venueName }} </td>
                         <td>{{ event.venueLocation }}</td>
+                        <td colspan="6" class="text-center">
+                            <button class="btn btn-primary">Buy Tickets</button>
+                        </td>
                         <!--td>{{ event.eventShowPrice | currency:'USD':'symbol' }}</td-->
                     </tr>
                 </tbody>

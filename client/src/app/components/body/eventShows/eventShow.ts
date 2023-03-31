@@ -1,6 +1,6 @@
 export interface IEventShow {
     id: number,
-    eventShowImgUrl: string,
+    imageSrc: string,
     category: string,
     name: string,
     venueName: string,

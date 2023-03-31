@@ -17,7 +17,11 @@ export class EventListComponent implements OnInit{
     showImage: boolean = false;
     listFilter: string = "";
     eventShows: IEventShow[] = [];
-    constructor(private eventShowService: EventShowService) { }
+    filteredEvents: IEventShow[];
+    buyTicket: boolean = false;
+    constructor(private eventShowService: EventShowService) {
+        this.filteredEvents = this.eventShows;
+    }
 
     ngOnInit(): void {
         this.eventShowService.getEventShows().subscribe(data => { 
@@ -28,4 +32,12 @@ export class EventListComponent implements OnInit{
     toggleImage(): void {
         this.showImage = !this.showImage;
     }
+
+    onFilterChange(): void {
+        this.filteredEvents = this.listFilter
+          ? this.eventShows.filter((event) =>
+              event.name.toLowerCase().includes(this.listFilter.toLowerCase())
+            )
+          : this.eventShows;
+      }
 }

@@ -37,7 +37,18 @@ header {
 }
 
 .logo {
-    size: 15px;
+    size: 10px;
+}
+
+.logo img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.categories {
+    text-align: center;
 }
 
 .categories li {
@@ -133,4 +144,15 @@ button {
 
 .button.log:hover {
     background-color: rgba(0, 128, 128, 0.5);
+}
+
+@media only screen and (max-width: 1024px) {
+
+.logo img {
+    max-width: 60%;
+}
+
+.categories {
+    font-size: 0.8em;
+}
 }
