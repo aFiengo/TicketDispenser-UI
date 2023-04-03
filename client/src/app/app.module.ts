@@ -8,7 +8,9 @@ import { AppComponent } from './app.component';
 import { EventListComponent } from './components/body/eventShows/eventShow-list.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SliderComponent } from './components/body/slider/slider.component';
+import { GalleryComponent } from './components/body/gallery/gallery.component';
+import { PurchaseComponent } from './components/purchase/purchase.component';
+import { EventShowService } from './components/body/eventShows/eventShow.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { SliderComponent } from './components/body/slider/slider.component';
     EventListComponent,
     FooterComponent,
     HeaderComponent,
-    SliderComponent
+    GalleryComponent,
+    PurchaseComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,7 @@ import { SliderComponent } from './components/body/slider/slider.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [EventShowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,24 @@
+<h1>{{ event.name }}</h1>
+<img [src]="'../../../../../../assets/img/large_cards/' +  event.id + '.jpg'" alt="Event Image" class="event-image">
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Zone Name</th>
+            <th>Ticket Price</th>
+            <th>Quantity</th>
+            <th>Add to Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let zone of event?.zones">
+            <td>{{ zone.id }}</td>
+            <td>{{ zone.name }}</td>
+            <td>{{ zone.ticketPrice | currency }}</td>
+            <td><input type="number" min="1" max="6"></td>
+            <td><button class="btn btn-primary">Add to Cart</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

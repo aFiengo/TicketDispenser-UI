@@ -1,3 +1,9 @@
+export interface IZone {
+    id: number,
+    name: string,
+    ticketPrice: number
+}
+
 export interface IEventShow {
     id: number,
     imageSrc: string,
@@ -6,6 +12,5 @@ export interface IEventShow {
     venueName: string,
     venueLocation: string,
     date: string,
-    zone: string,
-    price: number
+    zones: IZone[]
 }

@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { catchError, Observable, tap, throwError } from "rxjs";
+import { catchError, Observable, tap, throwError, map, filter } from "rxjs";
 import { IEventShow } from "./eventShow";
 
 @Injectable()
@@ -20,6 +20,12 @@ export class EventShowService {
         );
     }
 
+    getEventById(id: number): Observable<IEventShow> {
+        const url = `${this.eventShowUrl}/${id}`;
+        return this.http.get<IEventShow>(url).pipe(
+        catchError((error: any) => throwError(error))
+        );
+    }
 private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
         if (err.error instanceof ErrorEvent) {
