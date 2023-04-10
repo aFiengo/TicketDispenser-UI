@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { GalleryComponent } from './components/body/gallery/gallery.component';
 import { PurchaseComponent } from './components/purchase/purchase.component';
 import { EventShowService } from './components/body/eventShows/eventShow.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

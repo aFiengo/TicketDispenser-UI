@@ -1,3 +1,12 @@
 thead {
     color: #337ab7;
 }
+
+.event-image {
+margin: 0px;
+padding: 15px 0px;
+align-items: center;
+height: 10%;
+width: 100%;
+object-fit: cover;
+}

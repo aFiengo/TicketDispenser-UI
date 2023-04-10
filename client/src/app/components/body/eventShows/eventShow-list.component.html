@@ -25,17 +25,7 @@
                             </button>
                         </th>
                         <th>Event</th>
-                        <th>
-                            <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ selectedCategory || 'Category' }}
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                                    <a class="dropdown-item" href="#" (click)="filterByCategory()">All</a>
-                                    <a class="dropdown-item" href="#" *ngFor="let category of categories" (click)="filterByCategory(category)">{{ category }}</a>
-                                </div>
-                            </div>
-                        </th>
+                        <th>Category</th>
                         <th>Date</th>
                         <th>Venue</th>
                         <th>Location</th>
@@ -56,7 +46,7 @@
                         <td>{{ event.venueName }} </td>
                         <td>{{ event.venueLocation }}</td>
                         <td colspan="6" class="text-center">
-                            <button class="btn btn-primary" [routerLink]="['/purchase', event.id]">Buy Tickets</button>
+                            <button class="btn btn-primary" [routerLink]="['/events/', event.id]">Buy Tickets</button>
                         </td>
                     </tr>
                 </tbody>

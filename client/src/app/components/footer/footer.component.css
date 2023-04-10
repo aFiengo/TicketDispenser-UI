@@ -21,8 +21,10 @@ a:hover{
 .footer {
     background-color: #24252A;
     width: 100%;
+    height: auto;
     font-size: 20px;
     color: #eeeded;
+    position: fixed;
     bottom: 0;
     left: 0px; 
     right: 0px; 

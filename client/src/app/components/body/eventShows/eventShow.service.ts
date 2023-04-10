@@ -26,6 +26,12 @@ export class EventShowService {
         catchError((error: any) => throwError(error))
         );
     }
+    getEventsByCategory(category: string): Observable<IEventShow[]> {
+        return this.getEventShows().pipe(
+            map(events => events.filter(event => event.category === category)),
+            catchError(this.handleError)
+        );
+    }
 private handleError(err: HttpErrorResponse) {
         let errorMessage = '';
         if (err.error instanceof ErrorEvent) {
